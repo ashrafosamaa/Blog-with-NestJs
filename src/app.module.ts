@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 import { CloudinaryModule } from './cloudinary/cloudinary.module';
+import { BlogModule } from './blog/blog.module';
 
 
 @Module({
@@ -19,7 +20,8 @@ import { CloudinaryModule } from './cloudinary/cloudinary.module';
     }),
     UserModule,
     AuthModule,
-    CloudinaryModule
+    CloudinaryModule,
+    BlogModule
   ],
   controllers: [AppController],
   providers: [AppService],
